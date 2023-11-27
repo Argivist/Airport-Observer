@@ -8,13 +8,15 @@
 
 <body>
     <div class="body2">
-        <button class="ghostbutton" onclick="passengerpage()">
-            <div class="box" id="Header">Passenger Info</div>
+        <button class="ghostbutton" onclick="staffpage()">
+            <div class="box" id="Header">Staff Info</div>
         </button>
-        <!--Passenger info-->
-        <div class="passenger" id="passenger">
+        <!--Staff info-->
+        <div class="staff" id="staff">
             <div class="container">
-                <div class="box">Passenger ID:</div>
+                <div class="box">Staff ID:<div class="box innerbox">Box 4
+                    </div>
+                </div>
                 <div class="box two">Box 3</div>
                 <div class="box">First Name<div class="box innerbox">Box 4</div>
                 </div>
@@ -22,94 +24,64 @@
                 </div>
                 <div class="box">Other Name<div class="box innerbox">Box 4</div>
                 </div>
-                <div class="box">Luggage ID</div>
+                <div class="box">Date of Birth</div>
                 <div class="box two">Box 3</div>
-                <div class="box" id="FlightButton">FLight ID</div>
-                <div class="box two" id="FlightID">Box 3</div>
+                <div class="box" id="DeptButton">Department ID</div>
+                <div class="box two" id="DeptID">Box 3</div>
+                <div class="box" id="ManagerButton">Manager ID</div>
+                <div class="box two" id="MangID">Box 3</div>
+                <div class="box" id="type">Employee Type</div>
+                <div class="box two" id="Type">Box 3</div>
             </div>
         </div>
-        <!--Flight info-->
-        <div class="flight hidden" id="flight">
+        <!--Dept info-->
+        <div class="Dept hidden" id="Dept">
             <div class="container2">
-                <div class="box">Flight ID:</div>
-                <div class="box three4">Box 3</div>
-                <div class="box">Airline</div>
+                <div class="box">Dept ID:</div>
                 <div class="box three4">Box 3</div>
 
-                <div class="box three4">Flight type<div class="box innerbox">Box 4</div>
+                <div class="box two4">Department Name<div class="box innerbox">Box 4</div>
                 </div>
-                <div class="box" id="GateButton">Gate<div class="box innerbox" id="GateNum">Gate 1</div>
+                <div class="box two4">Department Head<div class="box innerbox">Box 4</div>
                 </div>
-
-
-                <div class="box two4">Departing City<div class="box innerbox">Box 4</div>
-                </div>
-                <div class="box two4">Destination<div class="box innerbox">Box 4</div>
-                </div>
-                <div class="box two4">Departure Time<div class="box innerbox">Box 4</div>
-                </div>
-                <div class="box two4">Arrival Time<div class="box innerbox">Box 4</div>
-                </div>
+                <div class="box">Description</div>
+                <div class="box three4">Box 3</div>
 
             </div>
         </div>
 
-        <!--Flight info-->
-        <div class="terminal hidden" id="terminal">
-            <div class="container2">
-
-                <div class="box two4">Gate<div class="box innerbox">Box 4</div>
-                </div>
-                <div class="box two4">Terminal<div class="box innerbox">Box 4</div>
-                </div>
-                <div class="box">Terminal Name</div>
-                <div class="box three4">Box 3</div>
-                <div class="box">Gate Name</div>
-                <div class="box three4">Box 3</div>
-
-
-            </div>
-        </div>
+    </div>
 
 
     </div>
 </body>
 <script>
-    var passenger = document.getElementById('passenger');
-    var flight = document.getElementById('flight');
+    var staff = document.getElementById('staff');
+    var Dept = document.getElementById('Dept');
     var terminal = document.getElementById('terminal');
     var header = document.getElementById('Header');
 
-    //Flight visibility
-    document.getElementById("FlightButton").onclick = function () {
-        passenger.className = "passenger hidden";
-        flight.className = "flight shown";
-        header.textContent="Flight Info"
-        
+    //Dept visibility
+    document.getElementById("DeptButton").onclick = function () {
+        staff.className = "staff hidden";
+        Dept.className = "Dept shown";
+        header.textContent = "Department Info"
+
     };
-    document.getElementById("FlightID").onclick = function () {
-        passenger.className = "passenger hidden";
-        flight.className = "flight shown";
-        header.textContent="Flight Info"
+    document.getElementById("DeptID").onclick = function () {
+        staff.className = "staff hidden";
+        Dept.className = "Dept shown";
+        header.textContent = "Department Info"
     };
-    //terminal visibility
-    document.getElementById("GateButton").onclick = function () {
-        flight.className = "flight hidden";
-        terminal.className = "terminal shown";
-        header.textContent="Gate Info"
-    };
-    document.getElementById("GateID").onclick = function () {
-        flight.className = "flight hidden";
-        terminal.className = "terminal shown";
-        header.textContent="Gate Info"
-    };
-    //Passenger visibility
-    function passengerpage() {
+
+
+    //staff visibility
+    function staffpage() {
         alert("receives");
-        passenger.className = "passenger shown";
-        flight.className = "flight hidden";
+        staff.className = "staff shown";
+        Dept.className = "Dept hidden";
         terminal.className = "terminal hidden";
-        header.textContent="Passenger Info"
+        header.textContent = "Staff Info"
     };
 </script>
 
