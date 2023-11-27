@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta />
+<html>
+
+<head>
+    <title>
+        Airport Management
+    </title>
+    <link rel="stylesheet" type="text/css" href="global.css"/>
+    <link rel="stylesheet" type="text/css" href="login.css" />
+</head>
+
+<body>
+    <div class="body">
+    <div class="tabs">
+        <button class="tab_button pass active">Passenger</button>
+        <button class="tab_button staff disabled">Staff</button>
+    </div>
+    <div class="inner-body">
+    <div id="passenger_login" class="passen shown">
+        <form action="submit">
+            <label>Passenger ID</label><br />
+            <input type="text" placeholder="Passenger ID" /><br />
+            <label>Password</label><br />
+            <input type="password" placeholder="password" /><br />
+            <input type="button" value="Submit" />
+        </form>
+    </div>
+    <div id="staff_access" class="st hidden">
+        <form>
+            <label>Staff ID</label><br />
+            <input type="text" placeholder="Staff ID" /><br />
+            <input type="password" placeholder="Clearance" /><br />
+            <input type="button" value="Search" />
+        </form>
+    </div>
+    </div>
+    </div>
+    <script>
+        var buttonpassen = document.querySelector('.tab_button.pass');
+        var buttonstaff = document.querySelector('.tab_button.staff');
+        var entitypass = document.getElementById('passenger_login');
+        var entitystaff = document.getElementById('staff_access');
+
+        buttonpassen.addEventListener('click', function () {
+            entitypass.className = 'passen shown';
+            entitystaff.className = 'st hidden';
+            buttonpassen.className = " tab_button pass active";
+            buttonstaff.className = " tab_button staff disabled";
+
+        });
+
+        buttonstaff.addEventListener('click', function () {
+            entitypass.className = 'passen hidden';
+            entitystaff.className = 'st shown';
+            buttonpassen.className = " tab_button pass disabled";
+            buttonstaff.className = " tab_button staff active";
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="global.css" />
+    <link rel="stylesheet" type="text/css" href="gridding.css" />
+</head>
+
+<body>
+    <div class="body2">
+        <button class="ghostbutton" onclick="passengerpage()">
+            <div class="box" id="Header">Passenger Info</div>
+        </button>
+        <!--Passenger info-->
+        <div class="passenger" id="passenger">
+            <div class="container">
+                <div class="box">Passenger ID:</div>
+                <div class="box two">Box 3</div>
+                <div class="box">First Name<div class="box innerbox">Box 4</div>
+                </div>
+                <div class="box">Last Name<div class="box innerbox">Box 4</div>
+                </div>
+                <div class="box">Other Name<div class="box innerbox">Box 4</div>
+                </div>
+                <div class="box">Luggage ID</div>
+                <div class="box two">Box 3</div>
+                <div class="box" id="FlightButton">FLight ID</div>
+                <div class="box two" id="FlightID">Box 3</div>
+            </div>
+        </div>
+        <!--Flight info-->
+        <div class="flight hidden" id="flight">
+            <div class="container2">
+                <div class="box">Flight ID:</div>
+                <div class="box three4">Box 3</div>
+                <div class="box">Airline</div>
+                <div class="box three4">Box 3</div>
+
+                <div class="box three4">Flight type<div class="box innerbox">Box 4</div>
+                </div>
+                <div class="box" id="GateButton">Gate<div class="box innerbox" id="GateNum">Gate 1</div>
+                </div>
+
+
+                <div class="box two4">Departing City<div class="box innerbox">Box 4</div>
+                </div>
+                <div class="box two4">Destination<div class="box innerbox">Box 4</div>
+                </div>
+                <div class="box two4">Departure Time<div class="box innerbox">Box 4</div>
+                </div>
+                <div class="box two4">Arrival Time<div class="box innerbox">Box 4</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Flight info-->
+        <div class="terminal hidden" id="terminal">
+            <div class="container2">
+
+                <div class="box two4">Gate<div class="box innerbox">Box 4</div>
+                </div>
+                <div class="box two4">Terminal<div class="box innerbox">Box 4</div>
+                </div>
+                <div class="box">Terminal Name</div>
+                <div class="box three4">Box 3</div>
+                <div class="box">Gate Name</div>
+                <div class="box three4">Box 3</div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+</body>
+<script>
+    var passenger = document.getElementById('passenger');
+    var flight = document.getElementById('flight');
+    var terminal = document.getElementById('terminal');
+    var header = document.getElementById('Header');
+
+    //Flight visibility
+    document.getElementById("FlightButton").onclick = function () {
+        passenger.className = "passenger hidden";
+        flight.className = "flight shown";
+        header.textContent="Flight Info"
+        
+    };
+    document.getElementById("FlightID").onclick = function () {
+        passenger.className = "passenger hidden";
+        flight.className = "flight shown";
+        header.textContent="Flight Info"
+    };
+    //terminal visibility
+    document.getElementById("GateButton").onclick = function () {
+        flight.className = "flight hidden";
+        terminal.className = "terminal shown";
+        header.textContent="Gate Info"
+    };
+    document.getElementById("GateID").onclick = function () {
+        flight.className = "flight hidden";
+        terminal.className = "terminal shown";
+        header.textContent="Gate Info"
+    };
+    //Passenger visibility
+    function passengerpage() {
+        alert("receives");
+        passenger.className = "passenger shown";
+        flight.className = "flight hidden";
+        terminal.className = "terminal hidden";
+        header.textContent="Passenger Info"
+    };
+</script>
+
+</html>

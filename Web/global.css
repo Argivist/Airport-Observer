@@ -1,0 +1,64 @@
+body {
+    background: url("image/airport.jpg");
+    background-size: cover;
+    /* Stretch the image to fill the page */
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    background-position: center;
+    /* Center the background image */
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(9, 48, 48);
+}
+
+.body {
+    width: 30%;
+    height: auto;
+}
+@media only screen and (max-width: 800px) {
+    .body {
+        width: 50%; /* Width at half screen and below */
+    }
+}
+.body2 {
+    width: 50%;
+    height: auto;
+}
+@media only screen and (max-width: 800px) {
+    .body2 {
+        width: 80%; /* Width at half screen and below */
+    }
+}
+
+
+
+.inner-body {
+
+    background: rgba(240, 248, 255, 0.605);
+    border: 1px solid rgba(170, 244, 244, 0.096);    
+    box-shadow: inset;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 0px 0px 10px 10px;
+
+}
+
+/*visibility*/
+.hidden {
+    display: none;
+    transition: ease-in-out 10s;
+}
+
+.shown {
+    display: block;
+    transition: ease-in-out 10s;
+}

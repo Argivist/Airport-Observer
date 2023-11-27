@@ -1,0 +1,54 @@
+
+
+
+.tabs{
+    backdrop-filter: blur(500px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: white;
+    opacity: .6;
+    border-radius: 10px 10px 0px 0px;
+    margin: 0;
+}
+.tabs button {
+    border: 0;
+    margin: 0px;
+    width: 48.7%;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px 10px 10px 0px;
+}
+
+
+
+.tab_button.active {
+    border-radius: 10px 10px 0px 0px;
+    background-color: grey;
+    border: 0;
+}
+
+.tab_button.disabled {
+background-color: white;
+border-radius: 20px 20px 10px 10px;
+}
+
+
+
+.inner-body label{
+    color:rgb(49, 48, 48);
+}
+
+.inner-body input[type="text"],input[type="password"]{
+    width: 80%;
+    height: 45px;
+    border: 0;
+    border-radius: 3px;
+    margin:5px;
+}
+
+.inner-body input[type="button"]{
+    border: 0;
+    margin: 10px;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+}
